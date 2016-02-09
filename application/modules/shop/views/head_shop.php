@@ -31,7 +31,7 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-3">
-                    Jam Kerja
+                    Jam Kerja ELKASSHOP
                 </div>
                 <div class="col-lg-3">
                     Pengiriman Gratis
