@@ -40,7 +40,7 @@
                     Jaminan Uang Kembali
                 </div>
                 <div class="col-lg-3">
-                    Nomor Telepon
+                    Nomor Telepon 02
                 </div>
             </div>
             <div class="row text-center">
