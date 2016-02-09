@@ -14,7 +14,7 @@
         <script type="text/javascript" src="<?PHP echo base_url('assets/js/bootstrap3-wysihtml5.all.min.js');?>"></script>
 	</head>
 	<div>
-		<nav class="nav navbar-default">
+		<nav class="nav navbar-default small">
 			<div class="container">
                 <div class="pull-left">
                     <p>Selamat datang di ELKASHOP.COM</p>
@@ -29,18 +29,22 @@
 			</div>
 		</nav>
         <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-3">
-                    Jam Kerja ELKASSHOP
+            <div class="row small">
+                <div class="col-lg-3 text-muted">
+                    <h4>Jam Kerja</h4>
+                    <p>Senin - Jumat (09:00 - 18:00)</p>
                 </div>
-                <div class="col-lg-3">
-                    Pengiriman Gratis
+                <div class="col-lg-3 text-muted">
+                    <h4>Pengiriman Gratis</h4>
+                    <p>Untuk Daerah Jabodetabek</p>
                 </div>
-                <div class="col-lg-3">
-                    Jaminan Uang Kembali
+                <div class="col-lg-3 text-muted">
+                    <h4>Jaminan Uang Kembali</h4>
+                    <p>Syarat dan Ketentuan Berlaku</p>
                 </div>
-                <div class="col-lg-3">
-                    Nomor Telepon 02
+                <div class="col-lg-3 text-muted">
+                    <h4>Nomor Telepon</h4>
+                    <p>(021) 7375096</p>
                 </div>
             </div>
             <div class="row text-center">
@@ -81,7 +85,7 @@
                         <li><a href="<?php echo site_url();?>"> <span class="fa fa-sign-in"></span> Masuk </a></li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown">
-                                <span class="fa"></span>
+                                KATEGORI <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="box box-widget text-center">
