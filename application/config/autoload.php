@@ -1,6 +1,4 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /*
 | -------------------------------------------------------------------
 | AUTO-LOADER
@@ -97,7 +95,7 @@ $autoload['helper'] = array('url');
 | config files.  Otherwise, leave it blank.
 |
 */
-$autoload['config'] = array();
+$autoload['config'] = array('assets');
 
 /*
 | -------------------------------------------------------------------
@@ -119,11 +117,11 @@ $autoload['language'] = array();
 | -------------------------------------------------------------------
 | Prototype:
 |
-|	$autoload['model'] = array('first_model', 'second_model');
+|	$autoload['models'] = array('first_model', 'second_model');
 |
-| You can also supply an alternative model name to be assigned
+| You can also supply an alternative models name to be assigned
 | in the controller:
 |
-|	$autoload['model'] = array('first_model' => 'first');
+|	$autoload['models'] = array('first_model' => 'first');
 */
-$autoload['model'] = array();
+$autoload['models'] = array();
