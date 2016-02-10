@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo assets_url('css/bootstrap.css');?>"/>
         <link rel="stylesheet" type="text/css" href="<?php echo assets_url('css/font-awesome.css');?>"/>
         <link rel="stylesheet" type="text/css" href="<?php echo assets_url('css/bootstrap3-wysihtml5.min.css');?>">
+
         <script type="text/javascript" src="<?php echo assets_url('js/jquery-1.11.3.min.js');?>"></script>
         <script type="text/javascript" src="<?php echo assets_url('js/jquery-ui.js');?>"></script>
         <script type="text/javascript" src="<?php echo assets_url('js/bootstrap.min.js');?>"></script>
@@ -29,12 +30,12 @@
 			</div>
 		</nav>
         <div class="container" style="padding: 20px 0 20px 0;">
-            <div class="row small">
+            <div class="row small center-block">
                 <div class="col-lg-3 text-muted">
                     <div class="row">
-                        <div class="col-lg-3"><span class="glyphicon glyphicon-time fa-3x text-left"></div>
-                        <div class="col-lg-9">
-                            <p>Jam Kerja</p>
+                        <div class="col-lg-2"><span class="fa fa-clock-o fa-3x"></div>
+                        <div class="col-lg-10">
+                            <p>JAM KERJA</p>
                             <p>Senin - Jumat (09:00 - 18:00)</p>
                         </div>
                     </div>
@@ -43,7 +44,7 @@
                     <div class="row">
                         <div class="col-lg-2"><span class="fa fa-truck fa-3x"></div>
                         <div class="col-lg-10">
-                            <p>Pengiriman Gratis</p>
+                            <p>PENGIRIMAN GRATIS</p>
                             <p>Untuk Daerah Jabodetabek</p>
                         </div>
                     </div>
@@ -52,7 +53,7 @@
                     <div class="row">
                         <div class="col-lg-2"><span class="fa fa-money fa-3x"></div>
                         <div class="col-lg-10">
-                            <p>Jaminan Uang Kembali</p>
+                            <p>JAMINAN UANG KEMBALI</p>
                             <p>Syarat dan Ketentuan Berlaku</p>
                         </div>
                     </div>
@@ -61,7 +62,7 @@
                     <div class="row">
                         <div class="col-lg-2"><span class="fa fa-phone-square fa-3x"></div>
                         <div class="col-lg-10">
-                            <p>Nomor Telepon</p>
+                            <p>TELEPON</p>
                             <p>(021) 7375096</p>
                         </div>
                     </div>
@@ -73,8 +74,13 @@
                         <img src="<?php echo base_url('assets/images/logo.png');?>" title="ELKASSHOP" />
                     </a>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-7">
                     <form method="post" class="input-group form-inline form-control" style="margin-top: 15px;">
+                        <span class="input-group-btn">
+                            <select>
+                                <>
+                            </select>
+                        </span>
                         <input type="text" name="cari" class="form-control" placeholder="Cari Barang"/>
                         <span class="input-group-btn">
                             <button type="input" class="btn btn-info btn-flat">
@@ -83,7 +89,7 @@
                         </span>
                     </form>
                 </div>
-                <div class="col-lg-2" style="margin-top: 15px;">
+                <div class="col-lg-1" style="margin-top: 15px;">
                     <span class="fa fa-shopping-cart fa-2x text-info"></span><p>Keranjang</p>
                 </div>
             </div>
@@ -105,12 +111,10 @@
                                 KATEGORI <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="box box-widget text-center">
-                                    <div class="box-body"><p></p></div>
-                                    <div class="box-footer">
-                                        <a type="button" class="btn btn-warning" href="<?php echo site_url(''); ?>"> <span class="fa fa-sign-out"></span>Keluar </a>
-                                    </div>
-                                </li>
+                                <li><a href="<?php echo site_url();?>"> Cash Drawer </a></li>
+                                <li><a href="<?php echo site_url();?>"> Printer Thermal </a></li>
+                                <li><a href="<?php echo site_url();?>"> Scaner Barcode </a></li>
+                                <li><a href="<?php echo site_url();?>"> Komputer </a></li>
                             </ul>
                         </li>
                         <li><a href="<?php echo site_url();?>"> Beranda </a></li>
