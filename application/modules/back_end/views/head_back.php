@@ -30,7 +30,7 @@
 	<header class="main-header">
             <a href="#" class="logo">
                  <span class="logo-mini"><b>E</b>L</span>
-                 <img src="<?php echo base_url('assets/images/logo.png');?>" title="ELKASSHOP"/>              
+                 <img src="<?php echo base_url('assets/images/logo1.png');?>" title="ELKASSHOP"/>              
                  <img src="<?php echo base_url('assets/images/logo_black.png');?>" title="ELKASSHOP"/>
             </a>
 			<nav class="navbar navbar-static-top" role="navigation">
@@ -57,7 +57,7 @@
 		 <ul class="sidebar-menu">
 			<div class="user-panel">
             <div class="pull-left image">
-              <img src="<?php echo assets_url()?>img/user2-160x160.jpg" class="img-circle" alt="User Image">
+              <img src="<?php echo assets_url()?>images/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
               <p>Mustofa Yuli Rachmad</p>
