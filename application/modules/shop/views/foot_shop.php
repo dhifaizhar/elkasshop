@@ -57,7 +57,7 @@
                         <h4 class="text-center">Hubungi Kami</h4>
                         <hr/>
                         <ul>
-                            <li>Jl. Betung Timus Raya Blok Ruko 10D Tanggerang Selatan Banten</li>
+                            <li>Jl. Betung Timur Raya Blok Ruko 10D Tanggerang Selatan Banten</li>
                             <li>cinta@elkasshop.com</li>
                             <li>(021) 7375096</li>
                         </ul>
