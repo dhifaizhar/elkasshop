@@ -1,3 +1,4 @@
+
 <?php 
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Back_End extends MX_Controller{
@@ -9,10 +10,11 @@ class Back_End extends MX_Controller{
 
     public function index(){
 	
-		$this->load->view('head_back'); 
-		$this->load->view('dashboard');  
+		$this->load->view('head_back');    
+		$this->load->view('dashboard');
         $this->load->view('foot_back');
     }
+	
 	public function admin_data(){
 		$this->load->view('head_back');    
 		$this->load->view('admin_data');
