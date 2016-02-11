@@ -6739,9 +6739,25 @@ button.close {
   }
 }
 footer{
-  display: block;
-  background-color: #001f3f;
-  padding: 20px 30px;
   color: #ffffff;
+}
+.foot-head{
+  background-color: #1f1f1f;
+  font-size: 20px;
+  padding: 15px 0px;
+}
+.foot-content{
+  background-color: #0f0f0f;
+  padding: 15px 0px;
+}
+.foot-foot{
+  padding-top: 10px;
+  background-color: #0a0a0a;
+  text-align: center;
+}
+.img-social{
+  height: 35px;
+  width: 35px;
+  margin-top: 15px;
 }
 /*# sourceMappingURL=bootstrap.css.map */

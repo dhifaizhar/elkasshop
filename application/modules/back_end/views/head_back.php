@@ -28,7 +28,7 @@
 	<header class="main-header">
             <a href="#" class="logo">
                
-                 <img src="<?php echo base_url('assets/images/logo.png');?>" title="ELKASSHOP"/>
+                 <img src="<?php echo base_url('assets/images/logo_black.png');?>" title="ELKASSHOP"/>
             </a>
 			<nav class="navbar navbar-static-top" role="navigation">
 			<a href="#" class="sidebar-toggle text-gray" data-toggle="offcanvas" role="button">
