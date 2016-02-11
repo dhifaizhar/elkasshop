@@ -1,0 +1,24 @@
+.etalase{
+    border:1px solid #aeaeae;
+    margin:10px 16px;
+}
+.etalase-img{
+    height:150px;
+    padding:10px;
+}
+
+.etalase-img > img{
+    height:130px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.etalase-content{
+    height:50px;
+    text-align: center;
+}
+.etalase-foot{
+    height:50px;
+    text-align: center;
+}
