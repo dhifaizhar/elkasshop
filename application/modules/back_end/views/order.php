@@ -2,25 +2,25 @@
 
 <html>
 <head>
-    <title>Elkasshop-Admin | Category Data</title>
+    <title>Elkasshop-Admin | Order Data</title>
 </head>
 
     <div class="content-wrapper">
         <section class="content-header">
             <h1>
-                Data | <small>Category</small>
+                Data | <small>Order</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="<?PHP echo site_url('admin');?>"><i class="fa fa-dashboard"></i> Home</a></li>
-				<li>catalogue</li>
-                <li class="active">catagory</li>
+				<li>sales</li>
+                <li class="active">order</li>
             </ol>
         </section>
 
         <section class="content">
 
            <div class="table-responsive">
-				<div class="col-md-6 text-left"><h4><span class="fa fa-list"></span> Category lIst</h4></div>
+				<div class="col-md-6 text-left"><h4><span class="fa fa-list"></span> Order List</h4></div>
 				<div class="col-md-6 text-right">
 					 <a  href="<?PHP echo site_url('admin/add_form'); ?>" class="btn btn-primary"  cltitle="Add"><span class="glyphicon glyphicon-plus"></span> Add Data</a>
 				</div>
@@ -29,8 +29,12 @@
             <table id="tables" class="table table-hover table-striped table-bordered">
                 <thead>
                 <tr>
-                    <th>No</th>
-                    <th>Category Name</th>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                    <th>Data Added</th>
+                    <th>Data Modified</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -38,10 +42,14 @@
                     <tr>
                         <td></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td class="text-center">
-							<a href="" class="btn btn-info fa fa-pencil" onclick="if(confirm('Ubah data Admin ini?')) return true; else return false;" title="ubah"></a>
-							&nbsp;
-							<a href="" class="btn btn-danger fa fa-trash" onclick="if(confirm('Apakah Anda yakin akan menghapus data?')) return true; else return false;" title="hapus"></a>
+									<a href="" class="btn bg-aqua fa fa-eye"  title="View"></a>
+									<a href="" class="btn bg-blue fa fa-pencil" onclick="if(confirm('Ubah data Admin ini?')) return true; else return false;" title="Edit"></a>
+									<a href="" class="btn btn-danger fa fa-trash" onclick="if(confirm('Apakah Anda yakin akan menghapus data?')) return true; else return false;" title="Delete"></a>
 						</td>
                     </tr>
                     <tr>

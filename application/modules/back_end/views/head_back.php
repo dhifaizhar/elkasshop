@@ -63,20 +63,20 @@
                 </div>
             </div>
             <li class="header">Control Menu</li>
-            <li <?PHP if($this->uri->segment(2) == "") echo "class='active'";?>><a href="<?php echo site_url(); ?>back_end/back_end"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-            <li <?PHP if($this->uri->segment(2) == "patient_data" || $this->uri->segment(2) == "doctor_data") echo "class='treeview active'"; else echo "class='treeview'";?>>
+            <li <?PHP if($this->uri->segment(2) == "back_end") echo "class='active'";?>><a href="<?php echo site_url(); ?>back_end/back_end"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+            <li <?PHP if($this->uri->segment(2) == "categories" || $this->uri->segment(2) == "product" ||$this->uri->segment(2) == "manufactur" ) echo "class='treeview active'"; else echo "class='treeview'";?>>
                 <a><i class="fa fa-tags"></i> <span>Catalogue</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li <?PHP if($this->uri->segment(2) == "patient_data") echo "class='active'";?>><a href="<?PHP echo site_url('index.php/back_end/category'); ?>"> Category</a></li>
-                    <li <?PHP if($this->uri->segment(2) == "doctor_data") echo "class='active'";?>><a href="<?PHP echo site_url('admin/doctor_data'); ?>">Product</a></li>
-                    <li <?PHP if($this->uri->segment(2) == "doctor_data") echo "class='active'";?>><a href="<?PHP echo site_url('admin/doctor_data'); ?>">Manufactur</a></li>
+                    <li <?PHP if($this->uri->segment(2) == "categories") echo "class='active'";?>><a href="<?PHP echo site_url('back_end/categories'); ?>"> Categories</a></li>
+                    <li <?PHP if($this->uri->segment(2) == "product") echo "class='active'";?>><a href="<?PHP echo site_url('back_end/product'); ?>">Product</a></li>
+                    <li <?PHP if($this->uri->segment(2) == "manufactur") echo "class='active'";?>><a href="<?PHP echo site_url('back_end/manufactur'); ?>">Manufactur</a></li>
                 </ul>
             </li>
-            <li <?PHP if($this->uri->segment(2) == "article_compose" || $this->uri->segment(2) == "article_data") echo "class='treeview active'"; else echo "class='treeview'";?>>
+            <li <?PHP if($this->uri->segment(2) == "order" || $this->uri->segment(2) == "return_product") echo "class='treeview active'"; else echo "class='treeview'";?>>
                 <a href="#"><i class="fa fa-shopping-cart"></i> <span>Sales</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li <?PHP if($this->uri->segment(2) == "article_compose") echo "class='active'";?>><a href="<?PHP echo site_url('admin/article_compose'); ?>">Order</a></li>
-                    <li <?PHP if($this->uri->segment(2) == "article_data") echo "class='active'";?>><a href="<?PHP echo site_url('admin/article_data'); ?>">Return</a></li>
+                    <li <?PHP if($this->uri->segment(2) == "order") echo "class='active'";?>><a href="<?PHP echo site_url('back_end/order'); ?>">Order</a></li>
+                    <li <?PHP if($this->uri->segment(2) == "return_product") echo "class='active'";?>><a href="<?PHP echo site_url('back_end/return_product'); ?>">Return</a></li>
                 </ul>
             </li>
             <li <?PHP if($this->uri->segment(2) == "article_compose" || $this->uri->segment(2) == "article_data") echo "class='treeview active'"; else echo "class='treeview'";?>>
@@ -89,7 +89,7 @@
                     <li <?PHP if($this->uri->segment(2) == "article_data") echo "class='active'";?>><a href="<?PHP echo site_url('admin/article_data'); ?>">Customer</a></li>
                 </ul>
             </li>
-            <li <?PHP if($this->uri->segment(2) == "recipe_data") echo "class='active'";?>><a href="<?PHP echo site_url('back_end/admin_data'); ?>"><i class="fa fa-cog"></i> <span>Admin Management</span>
+            <li <?PHP if($this->uri->segment(2) == "admin_data") echo "class='active'";?>><a href="<?PHP echo site_url('back_end/admin_data'); ?>"><i class="fa fa-cog"></i> <span>Admin Management</span>
             </li>
         </ul>
     </section>

@@ -20,9 +20,37 @@ class Back_End extends MX_Controller{
        
 	}
 	
-	public function category(){
+	public function categories(){
 		$this->load->view('head_back');    
 		$this->load->view('category');
+        $this->load->view('foot_back');
+		
+	}
+	
+	public function product(){
+		$this->load->view('head_back');    
+		$this->load->view('product');
+        $this->load->view('foot_back');
+		
+	}
+	
+	public function manufactur(){
+		$this->load->view('head_back');    
+		$this->load->view('manufactur');
+        $this->load->view('foot_back');
+		
+	}
+	
+	public function order(){
+		$this->load->view('head_back');    
+		$this->load->view('order');
+        $this->load->view('foot_back');
+		
+	}
+	
+	public function return_product(){
+		$this->load->view('head_back');    
+		$this->load->view('return');
         $this->load->view('foot_back');
 		
 	}
