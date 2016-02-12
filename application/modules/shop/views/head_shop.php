@@ -80,7 +80,7 @@
                     <form method="post" class="form-group form-inline" style="margin-top: 17px;">
                         <span class="input-group">
                             <select class="form-control" style="width: 150px;height: 50px;">
-                                <option>Kategori</option>
+                                <option>Semua Kategori</option>
                                 <option>Cash Drawer</option>
                                 <option>Printer Thermal</option>
                                 <option>Scaner Barcode</option>
@@ -117,7 +117,7 @@
                                 <span class="fa fa-align-justify"></span> &nbsp;&nbsp; KATEGORI &nbsp;&nbsp; <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" style="width: 290px;">
-                                <li><a href="<?php echo site_url();?>"> Cash Drawer </a></li>
+                                <li><a href="<?php echo site_url('shop/shop_category_list');?>"> Cash Drawer </a></li>
                                 <li><a href="<?php echo site_url();?>"> Printer Thermal </a></li>
                                 <li><a href="<?php echo site_url();?>"> Scaner Barcode </a></li>
                                 <li><a href="<?php echo site_url();?>"> Komputer </a></li>

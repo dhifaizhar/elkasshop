@@ -24,7 +24,7 @@
         </div>
         <div class="foot-content">
             <div class="container">
-                <div class="row">
+                <div class="row" style="text-decoration: none;">
                     <div class="col-lg-3">
                         <h4 class="text-center">Akun Saya</h4>
                         <hr/>
