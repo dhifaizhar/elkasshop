@@ -8,7 +8,7 @@
     <br/>
     <h2 class="text-center">PRODUK TERLARIS</h2>
     <hr/>
-    <div class="row">
+    <div class="row" style="margin-left: 15px">
         <div class="col-lg-2 etalase">
             <div class="etalase-img">
                 <img class="img-responsive" src="<?php echo assets_url('images/tv.jpg');?>" alt="tv"/>
