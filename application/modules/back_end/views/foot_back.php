@@ -1,5 +1,5 @@
-<footer class="navbar-bottom text-center no-print">
-    <p>&copy; 2016 <a href="<?PHP echo site_url();?>">ELKASSHOP</a>. All right reserved &middot; <a href="<?php echo site_url('tentang'); ?>">Tentang Kami</a></p>
+<footer class="bawah navbar-bottom text-center no-print">
+    <p>&copy; 2016 <a href="<?PHP echo site_url();?>">ELKASSHOP</a>. All right reserved &middot; 
 </footer>
 </body>
 </html>

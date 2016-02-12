@@ -17,7 +17,7 @@ class Back_End extends MX_Controller{
 	public function admin_data(){
 		$this->load->view('head_back');    
 		$this->load->view('admin_data');
-        $this->load->view('foot_back');
+       
 	}
 	
 	public function category(){

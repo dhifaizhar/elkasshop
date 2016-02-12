@@ -19,12 +19,13 @@
 
         <section class="content">
 
-            <div class="table-responsive">
-            <div>
-                <br/>
-                <a href="<?PHP echo site_url('admin/add_form'); ?>" class="btn btn-primary"  title="Add"><span class="glyphicon glyphicon-plus"></span> Add Data</a>
-            </div>
-                <br/>
+           <div class="table-responsive">
+				<div class="col-md-6 text-left"><h4><span class="fa fa-list"></span> Category lIst</h4></div>
+				<div class="col-md-6 text-right">
+					 <a  href="<?PHP echo site_url('admin/add_form'); ?>" class="btn btn-primary"  cltitle="Add"><span class="glyphicon glyphicon-plus"></span> Add Data</a>
+				</div>
+					<br/><br/>
+				<div class="kotak">		
             <table id="tables" class="table table-hover table-striped table-bordered">
                 <thead>
                 <tr>
