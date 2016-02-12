@@ -40,7 +40,9 @@
 
             <br/><br/>
             <div class="row">
-                <img class="img-responsive center-block" src="<?php echo assets_url('images/banner-twitter.png');?>" alt="banner#2">
+                <div class="col-lg-12">
+                    <img class="img-responsive center-block" src="<?php echo assets_url('images/banner-twitter.png');?>" alt="banner#2">
+                </div>
             </div>
 
             <?php $this->load->view('product_new');?>
