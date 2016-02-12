@@ -2,13 +2,13 @@
 
 <html>
 <head>
-    <title>Elkasshop-Admin | Order Data</title>
+    <title>Elkasshop-Admin | Order Report</title>
 </head>
 
     <div class="content-wrapper">
         <section class="content-header">
             <h1>
-                Data | <small>Order</small>
+                Report | <small>Order</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="<?PHP echo site_url('admin');?>"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -22,7 +22,9 @@
            <div class="table-responsive">
 				<div class="col-md-6 text-left"><h4><span class="fa fa-list"></span> Order List</h4></div>
 				<div class="col-md-6 text-right">
-					 <a  href="<?PHP echo site_url('admin/add_form'); ?>" class="btn btn-primary"  cltitle="Add"><span class="glyphicon glyphicon-plus"></span> Add Data</a>
+					 <a  href="<?PHP echo site_url('admin/add_form'); ?>" class="btn bg-red"  cltitle="Add"><span class="fa fa-file-pdf-o"></span> Export PDF</a>
+					 <a  href="<?PHP echo site_url('admin/add_form'); ?>" class="btn bg-green"  cltitle="Add"><span class="fa fa-file-excel-o"></span> Export Excel</a>
+					  <a  href="<?PHP echo site_url('admin/add_form'); ?>" class="btn bg-orange"  cltitle="Add"><span class="fa fa-print"></span> Print Priview</a>
 				</div>
 					<br/><br/>
 				<div class="kotak">		
@@ -35,7 +37,7 @@
                     <th>Total</th>
                     <th>Data Added</th>
                     <th>Data Modified</th>
-                    <th>Action</th>
+                    
                 </tr>
                 </thead>
                 <tbody>
@@ -46,11 +48,6 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="text-center">
-									<a href="" class="btn bg-aqua fa fa-eye"  title="View"></a>
-									<a href="" class="btn bg-blue fa fa-pencil" onclick="if(confirm('Ubah data Admin ini?')) return true; else return false;" title="Edit"></a>
-									<a href="" class="btn btn-danger fa fa-trash" onclick="if(confirm('Apakah Anda yakin akan menghapus data?')) return true; else return false;" title="Delete"></a>
-						</td>
                     </tr>
                     <tr>
                         <td colspan="8" align="center">Tidak ada data</td>

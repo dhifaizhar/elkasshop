@@ -54,5 +54,26 @@ class Back_End extends MX_Controller{
         $this->load->view('foot_back');
 		
 	}
+	
+	public function sales_report(){
+		$this->load->view('head_back');    
+		$this->load->view('order_report');
+        $this->load->view('foot_back');
+		
+	}
+	
+	public function product_report(){
+		$this->load->view('head_back');    
+		$this->load->view('product_report');
+        $this->load->view('foot_back');
+		
+	}
+	
+	public function return_report(){
+		$this->load->view('head_back');    
+		$this->load->view('return_report');
+        $this->load->view('foot_back');
+		
+	}
 }
 ?>

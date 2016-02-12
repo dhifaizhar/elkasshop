@@ -79,13 +79,13 @@
                     <li <?PHP if($this->uri->segment(2) == "return_product") echo "class='active'";?>><a href="<?PHP echo site_url('back_end/return_product'); ?>">Return</a></li>
                 </ul>
             </li>
-            <li <?PHP if($this->uri->segment(2) == "article_compose" || $this->uri->segment(2) == "article_data") echo "class='treeview active'"; else echo "class='treeview'";?>>
+            <li <?PHP if($this->uri->segment(2) == "sales_report" || $this->uri->segment(2) == "product_report" ||$this->uri->segment(2) == "return_report") echo "class='treeview active'"; else echo "class='treeview'";?>>
                 <a href="#"><i class="fa fa-files-o"></i> <span>Report</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li <?PHP if($this->uri->segment(2) == "article_compose") echo "class='active'";?>><a href="<?PHP echo site_url('admin/article_compose'); ?>">Sales</a></li>
-                    <li <?PHP if($this->uri->segment(2) == "article_data") echo "class='active'";?>><a href="<?PHP echo site_url('admin/article_data'); ?>">Product</a></li>
+                    <li <?PHP if($this->uri->segment(2) == "sales_report") echo "class='active'";?>><a href="<?PHP echo site_url('back_end/sales_report'); ?>">Sales</a></li>
+                    <li <?PHP if($this->uri->segment(2) == "product_report") echo "class='active'";?>><a href="<?PHP echo site_url('back_end/product_report'); ?>">Product</a></li>
                     <li <?PHP if($this->uri->segment(2) == "article_data") echo "class='active'";?>><a href="<?PHP echo site_url('admin/article_data'); ?>">Wishlist</a></li>
-                    <li <?PHP if($this->uri->segment(2) == "article_data") echo "class='active'";?>><a href="<?PHP echo site_url('admin/article_data'); ?>">Returns</a></li>
+                    <li <?PHP if($this->uri->segment(2) == "return_report") echo "class='active'";?>><a href="<?PHP echo site_url('back_end/return_report'); ?>">Returns</a></li>
                     <li <?PHP if($this->uri->segment(2) == "article_data") echo "class='active'";?>><a href="<?PHP echo site_url('admin/article_data'); ?>">Customer</a></li>
                 </ul>
             </li>
