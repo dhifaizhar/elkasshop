@@ -16,9 +16,7 @@
                 <li class="active">product</li>
             </ol>
         </section>
-
         <section class="content">
-
            <div class="table-responsive">
 				<div class="col-md-6 text-left"><h4><span class="fa fa-list"></span> Product List</h4></div>
 				<div class="col-md-6 text-right">
@@ -51,9 +49,9 @@
                         <td></td>
                         <td></td>
                         <td class="text-center">
-									<a href="" class="btn btn-info fa fa-pencil" onclick="if(confirm('Ubah data Admin ini?')) return true; else return false;" title="ubah"></a>
-									&nbsp;
-									<a href="" class="btn btn-danger fa fa-trash" onclick="if(confirm('Apakah Anda yakin akan menghapus data?')) return true; else return false;" title="hapus"></a>
+							<a href="" class="btn btn-info fa fa-pencil" onclick="if(confirm('Ubah data Admin ini?')) return true; else return false;" title="ubah"></a>
+							&nbsp;
+							<a href="" class="btn btn-danger fa fa-trash" onclick="if(confirm('Apakah Anda yakin akan menghapus data?')) return true; else return false;" title="hapus"></a>
 						</td>
                     </tr>
                     <tr>

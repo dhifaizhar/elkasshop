@@ -5,6 +5,7 @@ class Back_End extends MX_Controller{
         parent::__construct();
 		
 		 $this->load->library('template');
+		 $this->load->model("category_m");
     }
 
     public function index(){
@@ -17,6 +18,7 @@ class Back_End extends MX_Controller{
 	public function admin_data(){
 		$this->load->view('head_back');    
 		$this->load->view('admin_data');
+		$this->load->view('foot_back');
        
 	}
 	

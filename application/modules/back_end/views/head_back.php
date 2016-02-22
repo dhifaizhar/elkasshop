@@ -4,16 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,intial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
     <link type="text/css" href="<?php echo assets_url('css/bootstrap.css');?>" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="<?php echo assets_url('css/font-awesome.css');?>"/>
     <link rel="stylesheet" type="text/css" href="<?php echo assets_url('css/AdminLTE.min.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo assets_url('css/bootstrap3-wysihtml5.min.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo assets_url('css/skins/_all-skins.min.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo assets_url('css/admin.css');?>">
+	<link rel="stylesheet" type="text/css" href="<?PHP echo assets_url( 'css/jquery.tagsinput.css');?>" />
+	<link rel="stylesheet" type="text/css" href="<?PHP echo assets_url( 'css/jquery.dataTables.min.css');?>" />
+	<link rel="stylesheet" type="text/css" href="<?PHP echo assets_url( 'css/dataTables.bootstrap.css');?>" />
+	<link rel="stylesheet" type="text/css" href="<?PHP echo assets_url( 'css/datepicker.css');?>" />
 	
-	<script type="text/javascript" src="<?php echo assets_url('js/jquery-1.11.3.min.js');?>"></script>
+	
+	
+	
+	<script type="text/javascript" src="<?php echo assets_url('js/jquery-2.1.4.min.js');?>"></script>
     <script type="text/javascript" src="<?php echo assets_url('js/bootstrap.min.js');?>"></script>
-    <script type="text/javascript" src="<?php echo assets_url('js/app.min.js');?>"></script>
+	<script type="text/javascript" src="<?php echo assets_url('js/jquery.tagsinput.js');?>"></script>
+	<script type="text/javascript" src="<?php echo assets_url('js/app.min.js');?>"></script>
     <script type="text/javascript" src="<?PHP echo assets_url('js/jquery.dataTables.min.js');?>"></script>
     <script type="text/javascript" src="<?PHP echo assets_url('js/dataTables.responsive.min.js');?>"></script>
     <script type="text/javascript" src="<?PHP echo assets_url('js/bootstrap3-wysihtml5.all.min.js');?>"></script>
@@ -22,14 +31,13 @@
     <script type="text/javascript" src="<?PHP echo assets_url('js/fusioncharts.js');?>"></script>
     <script type="text/javascript" src="<?PHP echo assets_url('js/themes/fusioncharts.theme.carbon.js');?>"></script>
 </head>
-
 <body class="hold-transition skin-blue fixed sidebar-mini">
 <div class="wrapper">
     <header class="main-header">
         <a href="#" class="logo">
             <span class="logo-mini"><b>E</b>L</span>
-            <img src="<?php echo base_url('assets/images/logo1.png');?>" title="ELKASSHOP"/>
-            <img src="<?php echo base_url('assets/images/logo_black.png');?>" title="ELKASSHOP"/>
+            <img src="<?php echo base_url('assets/images/logo1.png');?>" />
+            
         </a>
         <nav class="navbar navbar-static-top" role="navigation">
             <a href="#" class="sidebar-toggle text-gray" data-toggle="offcanvas" role="button">
@@ -49,7 +57,6 @@
         </nav>
     </header>
 </div>
-
 <aside class="main-sidebar">
     <section class="sidebar">
         <ul class="sidebar-menu">
@@ -67,7 +74,7 @@
             <li <?PHP if($this->uri->segment(2) == "categories" || $this->uri->segment(2) == "product" ||$this->uri->segment(2) == "manufactur" ) echo "class='treeview active'"; else echo "class='treeview'";?>>
                 <a><i class="fa fa-tags"></i> <span>Catalogue</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li <?PHP if($this->uri->segment(2) == "categories") echo "class='active'";?>><a href="<?PHP echo site_url('back_end/categories'); ?>"> Categories</a></li>
+                    <li <?PHP if($this->uri->segment(2) == "categories" || $this->uri->segment(2) == "category" ) echo "class='active'";?>><a href="<?PHP echo site_url('back_end/categories'); ?>"> Categories</a></li>
                     <li <?PHP if($this->uri->segment(2) == "product") echo "class='active'";?>><a href="<?PHP echo site_url('back_end/product'); ?>">Product</a></li>
                     <li <?PHP if($this->uri->segment(2) == "manufactur") echo "class='active'";?>><a href="<?PHP echo site_url('back_end/manufactur'); ?>">Manufactur</a></li>
                 </ul>
