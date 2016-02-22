@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,intial-scale=1">
+        <meta name="viewport" content="width=device-width">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="shortcut icon" href="<?php echo assets_url('images/elkasshop.bmp');?>"/>
 
@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo assets_url('css/owl.carousel.css');?>"/>
         <link rel="stylesheet" type="text/css" href="<?php echo assets_url('css/bootstrap3-wysihtml5.min.css');?>">
 
-        <script type="text/javascript" src="<?php echo assets_url('js/jquery-1.11.3.min.js');?>"></script>
+        <script type="text/javascript" src="<?php echo assets_url('js/jquery-2.2.0.min.js');?>"></script>
         <script type="text/javascript" src="<?php echo assets_url('js/jquery-ui.js');?>"></script>
         <script type="text/javascript" src="<?php echo assets_url('js/owl.carousel.js');?>"></script>
         <script type="text/javascript" src="<?php echo assets_url('js/bootstrap.min.js');?>"></script>
@@ -113,15 +113,17 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-left">
-                        <li class="dropdown btn-info" style="font-weight: bold;width: 290px;height: 50px;">
+                        <li class="dropdown btn-info category-bar" style="">
                             <a class="dropdown-toggle text-center" data-toggle="dropdown" style="font-size: 18px">
                                 <span class="fa fa-align-justify"></span> &nbsp;&nbsp; KATEGORI &nbsp;&nbsp; <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" style="width: 290px;">
-                                <li><a href="<?php echo site_url('shop/shop_category_list');?>"> Cash Drawer </a></li>
-                                <li><a href="<?php echo site_url();?>"> Printer Thermal </a></li>
-                                <li><a href="<?php echo site_url();?>"> Scaner Barcode </a></li>
-                                <li><a href="<?php echo site_url();?>"> Komputer </a></li>
+                                <?php
+                                    $query = $this->db->get('el_category');
+                                    foreach($query->result() as $row){
+                                ?>
+                                <li><a href="<?php echo site_url('shop/shop_category_list/category_list/'.$row->category_id);?>"> <?php echo $row->category_name?> </a></li>
+                                <?php }?>
                             </ul>
                         </li>
                         <li><a href="<?php echo site_url();?>"> Beranda </a></li>

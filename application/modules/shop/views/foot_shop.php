@@ -15,16 +15,16 @@
                         </form>
                     </div>
                     <div class="col-lg-2 text-center">
-                        <img src="<?php echo base_url('assets/images/fb.png');?>" title="Facebook" class="img-social"/>&nbsp;&nbsp;
-                        <img src="<?php echo base_url('assets/images/tw.png');?>" title="Twitter" class="img-social"/>&nbsp;&nbsp;
-                        <img src="<?php echo base_url('assets/images/gp.png');?>" title="Google Plus" class="img-social"/>&nbsp;&nbsp;
+                        <img src="<?php echo assets_url('images/social_img/fb.png');?>" title="Facebook" class="img-social"/>&nbsp;&nbsp;
+                        <img src="<?php echo assets_url('images/social_img/tw.png');?>" title="Twitter" class="img-social"/>&nbsp;&nbsp;
+                        <img src="<?php echo assets_url('images/social_img/gp.png');?>" title="Google Plus" class="img-social"/>&nbsp;&nbsp;
                     </div>
                 </div>
             </div>
         </div>
         <div class="foot-content">
             <div class="container">
-                <div class="row" style="text-decoration: none;">
+                <div class="row">
                     <div class="col-lg-3">
                         <h4 class="text-center">Akun Saya</h4>
                         <hr/>

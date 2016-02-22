@@ -11,7 +11,7 @@
     <div class="row" style="margin-left: 15px">
         <div class="col-lg-2 etalase">
             <div class="etalase-img">
-                <img class="img-responsive" src="<?php echo assets_url('images/tv.jpg');?>" alt="tv"/>
+                <img class="img-responsive" src="<?php echo assets_url('images/product_img/tv.jpg');?>" alt="tv"/>
             </div>
             <div class="etalase-content">
                 Televisi 30" - Baru *<br/>
@@ -25,7 +25,7 @@
         </div>
         <div class="col-lg-2 etalase">
             <div class="etalase-img">
-                <img class="img-responsive" src="<?php echo assets_url('images/tablet.png');?>" alt="tv"/>
+                <img class="img-responsive" src="<?php echo assets_url('images/product_img/tablet.png');?>" alt="tv"/>
             </div>
             <div class="etalase-content">
                 Televisi 30" - Baru *<br/>
@@ -39,7 +39,7 @@
         </div>
         <div class="col-lg-2 etalase">
             <div class="etalase-img">
-                <img class="img-responsive" src="<?php echo assets_url('images/scanner.png');?>" alt="tv"/>
+                <img class="img-responsive" src="<?php echo assets_url('images/product_img/scanner.png');?>" alt="tv"/>
             </div>
             <div class="etalase-content">
                 Televisi 30" - Baru *<br/>
@@ -53,7 +53,7 @@
         </div>
         <div class="col-lg-2 etalase">
             <div class="etalase-img">
-                <img class="img-responsive" src="<?php echo assets_url('images/printer.png');?>" alt="tv"/>
+                <img class="img-responsive" src="<?php echo assets_url('images/product_img/printer.png');?>" alt="tv"/>
             </div>
             <div class="etalase-content">
                 Televisi 30" - Baru *<br/>
@@ -67,7 +67,7 @@
         </div>
         <div class="col-lg-2 etalase">
             <div class="etalase-img">
-                <img class="img-responsive" src="<?php echo assets_url('images/cashdr.png');?>" alt="tv"/>
+                <img class="img-responsive" src="<?php echo assets_url('images/product_img/cashdr.png');?>" alt="tv"/>
             </div>
             <div class="etalase-content">
                 Televisi 30" - Baru *<br/>
