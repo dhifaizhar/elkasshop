@@ -51,8 +51,7 @@ class Back_End extends MX_Controller{
 	public function product(){
 		if($this->session->userdata("role") == "Admin" || $this->session->userdata("role") == "Super_Admin"){
 			$this->load->view('head_back');    
-			$this->load->view('product/product');
-		
+			$this->load->view('product');
 			}
 		 else{
 			 redirect('back_end');

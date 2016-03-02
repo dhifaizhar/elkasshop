@@ -17,7 +17,7 @@
 		<link rel="stylesheet" type="text/css" href="<?PHP echo assets_url( 'css/datepicker.css');?>" />
 
 		<!-- JS -->
-		<script type="text/javascript" src="<?php echo assets_url('js/jquery-2.1.4.min.js');?>"></script>
+		<script type="text/javascript" src="<?php echo assets_url('js/jquery-2.2.0.min.js');?>"></script>
 		<script type="text/javascript" src="<?php echo assets_url('js/bootstrap.min.js');?>"></script>
 		<script type="text/javascript" src="<?php echo assets_url('js/jquery.tagsinput.js');?>"></script>
 		<script type="text/javascript" src="<?php echo assets_url('js/app.min.js');?>"></script>
@@ -60,7 +60,7 @@
 				<ul class="sidebar-menu">
 					<div class="user-panel">
 						<div class="pull-left image">
-							<img src="<?php echo assets_url()?>images/user2-160x160.jpg" class="img-circle" alt="User Image">
+							<img src="<?php echo assets_url()?>images/customer_profile_img/user2-160x160.jpg" class="img-circle" alt="User Image">
 						</div>
 						<div class="pull-left info">
 							<p><?PHP echo $this->session->userdata("name"); ?> </p>

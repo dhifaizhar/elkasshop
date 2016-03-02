@@ -41,7 +41,7 @@
 							<td><?PHP 
 							
 							$parent= $row->category_parent; 
-							if($parent !=0){
+							if($parent !=0){						
 								$q=mysql_query("SELECT * FROM el_category WHERE category_id='".$parent."'");
 								while($d=mysql_fetch_array($q))	{
 									echo $d['category_name'];
