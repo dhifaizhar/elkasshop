@@ -12,6 +12,7 @@ class Cart_M extends CI_Model {
         $this->db->select('*');
         $this->db->from($this->table);
         $this->db->join('el_product', 'el_product.product_id = el_cart.product_id');
+        $this->db->order_by('el_cart.time_added','DESC');
 
         $query = $this->db->get();
         return $query;
@@ -31,7 +32,7 @@ class Cart_M extends CI_Model {
                         '".$product_id."',
                         '1',
                         '".date('H:m:s')."',
-                        '".date('d-m-Y')."')";
+                        '".date('Y-m-d')."')";
         return $this->db->query($sql);
     }
     function data_cart_delete($cart_id){

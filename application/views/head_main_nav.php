@@ -40,7 +40,6 @@
                     </div>
                 </form>
             </div>
-
         </div>
         <div class="collapse navbar-collapse text-center" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
@@ -57,7 +56,7 @@
                 <li><a href="<?php echo site_url();?>"> Beranda </a></li>
                 <li><a href="<?php echo site_url();?>"> Produk Baru </a></li>
                 <li><?php $this->load->model('cart_m'); $query =  $this->cart_m->data_cart();?>
-                    <a href="<?php echo site_url('shop/shop_cart');?>" data-toggle="tooltip" data-placement="top" title="keranjang">
+                    <a href="<?php echo site_url('shop/shop_cart');?>" data-toggle="tooltip" title="keranjang">
                         <div class="fa fa-shopping-cart fa-1x"></div>
                         <span class="badge"><?php echo $query->num_rows();?></span>
                     </a>

@@ -11,11 +11,8 @@ class Checkout extends MX_Controller{
     }
 
     public function checkout_shipping(){
-        $data['jumlah']=$this->cart_m->data_cart_count()->row();
-        $data['detail']=$this->cart_m->data_cart();
-        $data['diskon']=$data['jumlah']->total*0.1;
-        $data['total']=$data['jumlah']->total - $data['diskon'];
-
+        $data['cart'] = $this->cart_m->data_cart();
+        $data['get'] = $this->cart_m->data_cart_count()->row();
 
         $this->load->view('head_shop');
         $this->load->view('checkout_shop',$data);

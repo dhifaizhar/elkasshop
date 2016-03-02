@@ -20,28 +20,26 @@ class Shop_Cart extends MX_Controller{
         if(!isset($ajax)){$ajax = false;}
 
         //getdata
-        $data['cart']=$this->cart_m->data_cart();
+        $data['cart'] = $this->cart_m->data_cart();
+
+
 
         //showdata
-        if($ajax){
-            $this->load->view('head_shop');
-            $this->load->view('customer_cart',$data);
-            $this->load->view('foot_shop');
-        }else{
-            $this->load->view('head_shop');
-            $this->load->view('customer_cart',$data);
-            $this->load->view('foot_shop');
-        }
+        $this->load->view('head_shop');
+        $this->load->view('customer_cart',$data);
+        $this->load->view('foot_shop');
     }
 
     public function add_cart($product_id){
-        $this->cart_m->data_cart_add($product_id);
-        return false;
+        $query =  $this->cart_m->data_cart_add($product_id);
+        if ($query){
+            $this->index();
+        }
     }
     public function delete_cart($cart_id){
         $query = $this->cart_m->data_cart_delete($cart_id);
-        if($query){
-            $this->cart();
+        if ($query){
+            $this->index();
         }
     }
 }
