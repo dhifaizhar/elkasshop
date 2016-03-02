@@ -1,6 +1,15 @@
+.gallery{
+    list-style: none;
+    float:left;
+    margin-left: -35px;
+}
+.gallery > li{
+    display: inline-flex;
+}
+
 .etalase{
     border:1px solid #eeeeee;
-    margin:10px 16px;
+    margin:9px;
     width:187px;
 }
 .etalase-img{

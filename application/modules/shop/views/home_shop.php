@@ -36,22 +36,23 @@
                 </div>
             </div>
 
-            <?php $this->load->view('product_bestselling');?>
+            <div class="row">
+                <?php $this->load->view('product_bestselling');?>
+            </div>
 
-            <br/><br/>
             <div class="row">
                 <div class="col-lg-12">
                     <img class="img-responsive center-block" src="<?php echo assets_url('images/banner_img/banner-twitter.png');?>" alt="banner#2">
                 </div>
             </div>
 
-            <?php $this->load->view('product_new');?>
+            <div class="row">
+                <?php $this->load->view('product_new');?>
+            </div>
 
-            <br/>
             <div class="row">
                 <?php $this->load->view('manufacture');?>
             </div>
         </div>
-        <br/><br/>
     </body>
 </html>

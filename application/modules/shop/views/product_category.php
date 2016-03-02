@@ -21,17 +21,17 @@
             <div class="row">
                 <div class="col-lg-3 panel">
                     <div class="panel-heading">
-                        <div class="panel-title text-center"><h4>Filter Data</h4></div>
-                    </div><hr/>
+                        <div class="panel-title text-center"><h4>FILTER</h4></div>
+                    </div>
                     <div class="panel-body">
                         <form method="post" class="form-group">
-                            <p>Rentang Harga</p><hr/>
+                            <hr/><p class="text-center">Rentang Harga</p><hr/>
                             <input type="text" name="min" class="form-control form-group" placeholder="Min"/>
                             <input type="text" name="max" class="form-control form-group" placeholder="Maks"/>
                             <br/>
                             <div class="form-group text-center">
-                                <button type="input" name="min" class="btn btn-danger">Bersihkan</button>
-                                <button type="input" name="max" class="btn btn-success">Telusuri</button>
+                                <a name="min" class="btn btn-danger">Bersihkan</a>
+                                <a name="max" class="btn btn-success">Telusuri</a>
                             </div>
                         </form>
                     </div>
@@ -73,13 +73,13 @@
                                             <?PHP echo $row->price;?><br/><br/>
                                         </div>
                                         <div class="etalase-foot">
-                                            <a href="<?php echo site_url('shop/shop_category_detail/category_detail/'.$row->product_id);?>" title="detail">
+                                            <a href="<?php echo site_url('shop/shop_category_detail/category_detail/'.$row->product_id);?>" data-toggle="tooltip" data-placement="top" title="detail">
                                                 <div class="btn btn-primary"><span class="fa fa-eye" ></span></div>
                                             </a>
-                                            <a href="<?php echo site_url();?>" title="add to cart">
+                                            <a type="button" onclick="add_cart(<?php echo $row->product_id?>)" title="add to cart" data-toggle="tooltip" data-placement="top">
                                                 <div class="btn btn-success"><span class="fa fa-cart-plus" ></span></div>
                                             </a>
-                                            <a href="<?php echo site_url();?>" title="wish list">
+                                            <a href="<?php echo site_url();?>" title="wish list" data-toggle="tooltip" data-placement="top">
                                                 <div class="btn btn-warning"><span class="fa fa-heart-o"></span></div>
                                             </a>
                                         </div>
@@ -129,8 +129,17 @@
                     }
                 });
             });
-
             return false;
         });
+
+        function add_cart(id){
+            var id = id;
+            $.ajax({
+                type:'POST',
+                data:{id : id},
+                url:'<?php echo site_url('shop/shop_cart/add_cart')?>'+'/'+ id,
+                success: function(){ alert('Keranjang berhasil di tambah'); }
+            });
+        }
     </script>
 </html>
