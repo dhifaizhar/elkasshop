@@ -4,7 +4,7 @@
 		//Property
 		private $category_id;
 		private $category_name;
-		private $parent_category;
+		private $category_parent;
 		private $level;
 		private $description;
 		private $status;
@@ -18,8 +18,8 @@
 			$this->category_name = $value;
 		}
 		
-		public function set_parent_category($value) {
-			$this->parent_category = $value;
+		public function set_category_parent($value) {
+			$this->category_parent = $value;
 		}
 		
 		public function set_level($value) {
@@ -43,8 +43,8 @@
 			return $this->category_name;
 		}
 		
-		public function get_parent_category() {
-			return $this->parent_category;
+		public function get_category_parent() {
+			return $this->category_parent;
 		}
 		
 		public function get_level() {
@@ -76,7 +76,7 @@
 			$sql = "INSERT INTO el_category() 
 				VALUES ('".$this->get_category_id()."',
 				'".$this->get_category_name()."',
-				'".$this->get_parent_category()."',
+				'".$this->get_category_parent()."',
 				'".$this->get_level()."',
 				'".$this->get_description()."',
 				'".$this->get_status()."')";
@@ -88,9 +88,10 @@
 					SET 
 					category_name='".$this->get_category_name()."',
 					description='".$this->get_description()."',
+					category_parent='".$this->get_category_parent()."',
+					level='".$this->get_level()."',
 					status='".$this->get_status()."'		
 					WHERE category_id='".$category_id."'";					
-					
 			$this->db->query($sql);
 		}
 		

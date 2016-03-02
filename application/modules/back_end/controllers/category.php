@@ -10,13 +10,17 @@ class Category extends MX_Controller{
 	
 	public function index(){
 	   
-		$this->load->view('add_category');
-      
+	   if($this->session->userdata("role") == "Admin" || $this->session->userdata("role") == "Super_Admin"){
+			$this->load->view('category/add_category');
+		}
+		 else{
+			 redirect('back_end');
+		 }		
 	}
 	
 	public function insert(){
 			$this->category_m->set_category_name($this->input->post("category_name"));
-			$this->category_m->set_parent_category($this->input->post("parent_category"));
+			$this->category_m->set_category_parent($this->input->post("category_parent"));
             $this->category_m->set_level($this->input->post("level"));
             $this->category_m->set_description($this->input->post("description"));
             $this->category_m->set_status($this->input->post("status"));
@@ -33,7 +37,7 @@ class Category extends MX_Controller{
 	public function update() {
 			$this->category_m->set_category_id($this->input->post("category_id"));
 			$this->category_m->set_category_name($this->input->post("category_name"));
-			$this->category_m->set_parent_category($this->input->post("parent_category"));
+			$this->category_m->set_category_parent($this->input->post("category_parent"));
             $this->category_m->set_level($this->input->post("level"));
 			$this->category_m->set_description($this->input->post("description"));
 			$this->category_m->set_status($this->input->post("status"));			
@@ -49,17 +53,13 @@ class Category extends MX_Controller{
 			
 			$data["category_id"] = $row->category_id;
 			$data["category_name"] = $row->category_name;
-			$data["parent_category"] = $row->parent_category;
+			$data["category_parent"] = $row->category_parent;
 			$data["level"] = $row->level;
 			$data["description"] = $row->description;
 			$data["status"] = $row->status;
 			}
 			
-			$this->load->view('add_category',$data);	
-	}
-	
-	
-	
-	
+			$this->load->view('category/add_category',$data);	
+	}	
 }
 ?>

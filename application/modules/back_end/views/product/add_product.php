@@ -212,24 +212,8 @@
 			</div>
         </section>
     </div>
-	<footer class="bawah navbar-bottom text-center no-print">
-    <p>&copy; 2016 <a href="<?PHP echo site_url();?>">ELKASSHOP</a>. All right reserved &middot; 
-</footer>
 </html>
-<script>
-    $(function () {
-        //CKEDITOR.replace('#compose-textarea');
-        $("#compose-textarea").wysihtml5();
-    });
-</script>
-<script>
-	$(function() {
-		$( "#datepicker" ).datepicker({
-			changeMonth: true,
-			changeYear: true
-		});
-	});
-	</script>
+
 <script>
 
 

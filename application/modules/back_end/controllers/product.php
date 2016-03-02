@@ -10,13 +10,23 @@ class Product extends MX_Controller{
     }
 	
 	public function index(){
-		$this->load->view('head_back');    
-		$this->load->view('product');
-        $this->load->view('foot_back');
+		 if($this->session->userdata("role") == "Admin" || $this->session->userdata("role") == "Super_Admin"){
+			$this->load->view('head_back');    
+			$this->load->view('product');
+			
+		}
+		 else{
+			 redirect('back_end');
+		 }	
 	}
 	
 	public function add_product(){
-		$this->load->view('add_product');
+		 if($this->session->userdata("role") == "Admin" || $this->session->userdata("role") == "Super_Admin"){
+			$this->load->view('product/add_product');
+		}
+		 else{
+			 redirect('back_end');
+		 }		
 	}
 	
 	public function delete($product_id) {

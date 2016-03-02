@@ -74,16 +74,11 @@
                         </div>
                         <a href="<?PHP echo site_url('admin/recipe_data'); ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
-                </div> 
+                </div>
+				
             </div>
         </section>
     </div>
 </html>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("table").dataTable(
-            { "lengthMenu": [[1, 3, 5], [1, 3, 5]] }
-        );
-    });
-</script>
+
