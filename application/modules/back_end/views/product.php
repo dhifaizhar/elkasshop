@@ -40,15 +40,15 @@
                 </thead>
                 <tbody>
 					<?PHP
-						$query = $this->product_m->view();
+						$query = $this->product_m->inner_join();
 						foreach($query->result() as $row) {
 					?>
                     <tr>
-                        <td><?PHP echo $row->image; ?></td>
-                        <td><?PHP echo $row->product_name; ?></td>
                         <td><?PHP echo $row->manufactur_id; ?></td>
+                        <td><?PHP echo $row->product_name; ?></td>
+                        <td><?PHP echo $row->manufactur_name; ?></td>
                         <td><?PHP echo $row->price; ?></td>
-                        <td><?PHP echo $row->quantity; ?></td>
+                        <td><?PHP echo $row->stock; ?></td>
                         <td><?PHP echo $row->status; ?></td>
                         <td class="text-center">
 									<a href="" class="btn btn-info fa fa-pencil" onclick="if(confirm('Ubah data Admin ini?')) return true; else return false;" title="ubah"></a>

@@ -22,5 +22,10 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			$sql = "SELECT * FROM el_product ";
 				return $this->db->query($sql);
 		}
+		
+		public function inner_join(){
+			$SQL ="Select * from el_manufactur, el_product Where el_product.manufactur_id = el_manufactur.manufactur_id";
+			return $this->db->query($SQL);
+		}
 	}
 ?>
