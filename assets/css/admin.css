@@ -1,9 +1,70 @@
+
+html{
+	background-color:#ecf0f6;
+}
 .kotak{
 	border: solid 1px white;
 	padding: 10px;
+	margin-bottom:10px;
+	
+	background:rgba(255,255,255,0.8);
+}
+
+.kotak_full{
+	border: solid 1px white;
+	padding: 10px;
+	margin-bottom:10px;
+	height:400px;
 	background:rgba(255,255,255,0.8);
 }
 
 .bawah{
+	
 	color:blue;	
 }
+
+.konten{
+	height:680px;
+	
+}
+
+.img-thumbnail  {
+	color: #FFFFFF;
+	background-color: #FFFFFF;
+	text-align: center;
+	vertical-align: middle;
+	width:50px;
+	height:50px;
+	padding-top: 20px;
+	display: inline-block;
+	
+}
+
+.bgMasuk {
+	width:100%;
+	height:800px;
+
+}
+
+.foot{
+	/* background-color:#29527b; */
+	
+	
+	padding-bottom:10px;
+	color:#336699;
+	margin-top:30px;
+}
+
+.table tbody>tr>td.vert-align {
+	vertical-align: middle;
+}
+
+.table thead>tr>th{
+	text-align: center;
+}
+.log{
+	margin-top:150px;
+}
+
+
+

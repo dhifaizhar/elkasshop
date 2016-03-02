@@ -22,7 +22,7 @@
            <div class="table-responsive">
 				<div class="col-md-6 text-left"><h4><span class="fa fa-list"></span> Order List</h4></div>
 				<div class="col-md-6 text-right">
-					 <a  href="<?PHP echo site_url('admin/add_form'); ?>" class="btn bg-red"  cltitle="Add"><span class="fa fa-file-pdf-o"></span> Export PDF</a>
+					 <a  href="<?PHP echo site_url('admin/add_form'); ?>" class="btn bg-red"  cltitle="Add"><span class="fa fa-file-pdf-o"></span> <span class="hidden-xs">Export PDF</span></a>
 					 <a  href="<?PHP echo site_url('admin/add_form'); ?>" class="btn bg-green"  cltitle="Add"><span class="fa fa-file-excel-o"></span> Export Excel</a>
 					  <a  href="<?PHP echo site_url('admin/add_form'); ?>" class="btn bg-orange"  cltitle="Add"><span class="fa fa-print"></span> Print Priview</a>
 				</div>

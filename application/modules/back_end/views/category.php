@@ -26,7 +26,7 @@
 					<thead>
 						<tr>
 							<th>Category Name</th>
-							<th>Description</th>
+							<th>Parent</th>
 							<th>Status</th>
 							<th>Action</th>
 						</tr>
@@ -38,8 +38,25 @@
 					?>
 						<tr>
 							<td><?PHP echo $row->category_name; ?></td>
-							<td><?PHP echo $row->description; ?></td>
-							<td><?PHP echo $row->status; ?></td>
+							<td><?PHP 
+							
+							$parent= $row->category_parent; 
+							if($parent !=0){
+								$q=mysql_query("SELECT * FROM el_category WHERE category_id='".$parent."'");
+								while($d=mysql_fetch_array($q))	{
+									echo $d['category_name'];
+								}
+							}
+							else echo "Induk";
+							?>
+							
+							</td>
+							<td>
+							<?PHP if($row->status==0){
+								echo "Disabled";
+							}
+							else echo "Enabled";
+								?></td>
 							<td class="text-center">
 								<a href="<?php echo site_url();?>back_end/category/view_edit/<?PHP echo $row->category_id; ?>" class="btn btn-info fa fa-pencil" onclick="if(confirm('Ubah data ini?')) return true; else return false;" title="ubah"></a>
 								&nbsp;

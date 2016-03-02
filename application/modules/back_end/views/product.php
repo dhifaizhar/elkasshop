@@ -33,7 +33,7 @@
                     <th>Product Name</th>
                     <th>Manufactur</th>
                     <th>Price</th>
-                    <th>Quantity</th>
+                    <th>Stock</th>
                     <th>Status</th>
                     <th>Action</th>
                 </tr>

@@ -6,76 +6,123 @@ class Back_End extends MX_Controller{
 		
 		 $this->load->library('template');
 		 $this->load->model("category_m");
+		 $this->load->model("manufactur_m");
+		 $this->load->model("admin_m");
     }
 
-    public function index(){
+    public function index(){	   
+		$this->load->view('admin/login');
+    }
 	
-		$this->load->view('head_back');    
-		$this->load->view('dashboard');
-        $this->load->view('foot_back');
+	 public function dashboard(){
+		if($this->session->userdata("role") == "Admin" || $this->session->userdata("role") == "Super_Admin"){
+			$this->load->view('head_back');    
+			$this->load->view('dashboard');
+		}
+		 else{
+			 redirect('back_end');
+		 }	
+		 
+		
     }
 	
 	public function admin_data(){
-		$this->load->view('head_back');    
-		$this->load->view('admin_data');
-		$this->load->view('foot_back');
-       
+		if($this->session->userdata("role") == "Admin" || $this->session->userdata("role") == "Super_Admin"){
+			$this->load->view('head_back');    
+			$this->load->view('admin_data');
+		
+			}
+		 else{
+			 redirect('back_end');
+		 }
 	}
 	
 	public function categories(){
-		$this->load->view('head_back');    
-		$this->load->view('category');
-        $this->load->view('foot_back');
-		
+		if($this->session->userdata("role") == "Admin" || $this->session->userdata("role") == "Super_Admin"){
+			$this->load->view('head_back');    
+			$this->load->view('category');
+			
+			}
+		 else{
+			 redirect('back_end');
+		 }
 	}
 	
 	public function product(){
-		$this->load->view('head_back');    
-		$this->load->view('product');
-        $this->load->view('foot_back');
+		if($this->session->userdata("role") == "Admin" || $this->session->userdata("role") == "Super_Admin"){
+			$this->load->view('head_back');    
+			$this->load->view('product/product');
 		
+			}
+		 else{
+			 redirect('back_end');
+		 }
 	}
 	
-	public function manufactur(){
-		$this->load->view('head_back');    
-		$this->load->view('manufactur');
-        $this->load->view('foot_back');
-		
+	public function manufactur_view(){
+		if($this->session->userdata("role") == "Admin" || $this->session->userdata("role") == "Super_Admin"){
+			$this->load->view('head_back');    
+			$this->load->view('manufactur');
+	
+			}
+		 else{
+			 redirect('back_end');
+		 }
 	}
 	
 	public function order(){
-		$this->load->view('head_back');    
-		$this->load->view('order');
-        $this->load->view('foot_back');
+		if($this->session->userdata("role") == "Admin" || $this->session->userdata("role") == "Super_Admin"){
+			$this->load->view('head_back');    
+			$this->load->view('order');
 		
+			}
+		 else{
+			 redirect('back_end');
+		 }
 	}
 	
 	public function return_product(){
-		$this->load->view('head_back');    
-		$this->load->view('return');
-        $this->load->view('foot_back');
+		if($this->session->userdata("role") == "Admin" || $this->session->userdata("role") == "Super_Admin"){
+			$this->load->view('head_back');    
+			$this->load->view('return');
 		
+			}
+		 else{
+			 redirect('back_end');
+		 }
 	}
 	
 	public function sales_report(){
-		$this->load->view('head_back');    
-		$this->load->view('order_report');
-        $this->load->view('foot_back');
-		
+		if($this->session->userdata("role") == "Admin" || $this->session->userdata("role") == "Super_Admin"){
+			$this->load->view('head_back');    
+			$this->load->view('order_report');
+	
+			}
+		 else{
+			 redirect('back_end');
+		 }
 	}
 	
 	public function product_report(){
-		$this->load->view('head_back');    
-		$this->load->view('product_report');
-        $this->load->view('foot_back');
+		if($this->session->userdata("role") == "Admin" || $this->session->userdata("role") == "Super_Admin"){
+			$this->load->view('head_back');    
+			$this->load->view('product_report');
 		
+			}
+		 else{
+			 redirect('back_end');
+		 }		
 	}
 	
 	public function return_report(){
-		$this->load->view('head_back');    
-		$this->load->view('return_report');
-        $this->load->view('foot_back');
+		if($this->session->userdata("role") == "Admin" || $this->session->userdata("role") == "Super_Admin"){
+			$this->load->view('head_back');    
+			$this->load->view('return_report');
 		
+			}
+		 else{
+			 redirect('back_end');
+		 }
 	}
 }
 ?>
