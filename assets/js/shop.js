@@ -1,3 +1,6 @@
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
 function mulai(){
     var waktu = new Date();
     var hari = new Array("Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu");
