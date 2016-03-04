@@ -17,23 +17,21 @@ class Manufactur extends MX_Controller{
 	}
 	
 	public function insert(){
+		$this->manufactur_m->set_manufactur_name($this->input->post("manufactur_name"));
 		$config['upload_path']='./assets/images/manufactur_img';
 		$config['allowed_types'] = 'gif|jpg|png|jpeg';
 		$config['max_size']	= '2000';
 		$config['max_width']  = '1024';
 		$config['max_height']  = '768';
-			
-			
+					
 		//masukan konfigurasi
 		$this->load->library('upload',$config);
-		
-
-		
+				
 		//proses upload
 		if ( $this->upload->do_upload("image"))
 		{
 			$data=$this->upload->data();
-			$this->manufactur_m->set_manufactur_name($this->input->post("manufactur_name"));
+			
 			$this->load->helper('inflector');
 			$file_name = underscore($_FILES['file_var_name']['name']);
 			$config['file_name'] = $file_name;
@@ -77,15 +75,13 @@ class Manufactur extends MX_Controller{
 			$data["image"] = $row->image;
 			}
 			
-			
-			
 			$this->load->view('manufactur/add_manufactur',$data);	
 	}
 	
 	public function update() {
 		$config['upload_path']='./assets/images/manufactur_img';
 		$config['allowed_types'] = 'gif|jpg|png|jpeg';
-		$config['max_size']	= '2000';
+		$config['max_size']	= '3000';
 		$config['max_width']  = '1024';
 		$config['max_height']  = '768';
 			
@@ -96,6 +92,14 @@ class Manufactur extends MX_Controller{
 
 		
 		//proses upload
+		if(empty($this->upload->do_upload("image")))
+		{
+			$this->manufactur_m->set_manufactur_id($this->input->post("manufactur_id"));
+			$this->manufactur_m->set_manufactur_name($this->input->post("manufactur_name"));
+			$this->manufactur_m->update_1($this->input->post("manufactur_id"));
+			return redirect('back_end/manufactur_view');
+		}
+		else{
 		if ( $this->upload->do_upload("image"))
 		{
 			$data=$this->upload->data();
@@ -120,6 +124,7 @@ class Manufactur extends MX_Controller{
 		}
 	
 		}
+	}
 	
 	public function delete($manufactur_id) {
 			$this->manufactur_m->set_manufactur_id($manufactur_id);

@@ -45,7 +45,7 @@
 					<div class="navbar-custom-menu">
 						<ul class="nav navbar-nav ">
 							<li class="header">
-								<a href="<?PHP echo base_url('back_end/admin/sign_out'); ?>" class="dropdown-toggle" >
+								<a href="<?PHP echo base_url('back_end/admin/sign_out'); ?>" class="dropdown-toggle" data-toggle="tooltip" data-placement="bottom" title="Logout">
 									<span class="hidden-xs">Sign Out</span>
 									<span class="fa fa-sign-out"></span>
 								</a>

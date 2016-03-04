@@ -76,8 +76,7 @@
 						<li>
 							<a href="<?php echo base_url('#tab-data');?>" data-toggle="tab" >Data</a>
 						</li>
-					</ul>
-					
+					</ul>	
 				</div>
 				<div class="col-md-6">
 				
@@ -86,7 +85,6 @@
 							<a  class="btn bg-orange"><i class="fa fa-reply"></i> Cancel</a>
 						</div>
 				</div>	
-				
 			</div>
 		</div>
 		<div class="tab-content">
@@ -112,7 +110,6 @@
 									<textarea class="form-control" rows="12" id="compose-textarea" name="description"> <?PHP if(! empty($product_id)) echo $description; ?> </textarea>
 								</div>
 							</div>
-					
 					<div class="row form-group">
 						<div class="col-sm-2 text-right">
 								<label>Meta</label>
@@ -194,8 +191,7 @@
 							}
 						?>
 									</select>
-								</div>
-								
+								</div>	
 						</div>
 						<div class="row form-group">
 							<div class="col-sm-2 text-right">

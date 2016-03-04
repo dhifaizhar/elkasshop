@@ -59,6 +59,14 @@
 			$this->db->query($sql);
 		}
 		
+		public function update_1($manufactur_id) {
+			$sql = "UPDATE el_manufactur
+					SET 
+					manufactur_name='".$this->get_manufactur_name()."'
+					WHERE manufactur_id='".$manufactur_id."'";					
+			$this->db->query($sql);
+		}
+		
 		public function delete() {
 			$sql = "DELETE FROM el_manufactur 
 					WHERE manufactur_id='".$this->get_manufactur_id()."'";

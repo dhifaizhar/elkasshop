@@ -16,9 +16,9 @@
         </section>
         <section class="content">
            <div class="table-responsive">
-				<div class="col-md-6 text-left"><h4><span class="fa fa-list"></span> Manufactur List</h4></div>
-				<div class="col-md-6 text-right">
-					 <a  href="<?PHP echo site_url('back_end/manufactur');; ?>" class="btn btn-primary"  cltitle="Add"><span class="glyphicon glyphicon-plus"></span> Add Data</a>
+				<div class="col-md-6 col-xs-8 text-left"><h4><span class=" hidden-xs fa fa-list"></span> Manufactur List</h4></div>
+				<div class="col-md-6 col-xs-4 text-right ">
+					 <a  href="<?PHP echo site_url('back_end/manufactur');; ?>" class="btn btn-primary block-right"  title="Add Data" data-toggle="tooltip" data-placement="bottom"><span class="glyphicon glyphicon-plus"></span> <span class="hidden-xs " >Add Data</span></a>
 				</div>
 				<br/><br/>
 				<div class="kotak">		
@@ -39,10 +39,12 @@
 								<td class="text-center">
 									<img class=" img-responsive img-thumbnail" src="<?php echo assets_url();?>images/manufactur_img/<?php echo $row->image ;?>" /></td>
 								<td class="vert-align"><?PHP echo $row->manufactur_name; ?></td>
-								<td class="vert-align text-center">
-									<a href="<?PHP echo site_url();?>back_end/manufactur/view_edit/<?PHP echo $row->manufactur_id; ?>" " class="btn btn-info fa fa-pencil" onclick="if(confirm('Ubah data ini?')) return true; else return false;"  data-toggle="tooltip" data-placement="bottom" title="Edit"></a>
-									&nbsp;
-									<a href="<?php echo site_url();?>back_end/manufactur/delete/<?PHP echo $row->manufactur_id; ?>" class="btn btn-danger fa fa-trash" onclick="if(confirm('Apakah Anda yakin akan menghapus data?')) return true; else return false;"  data-toggle="tooltip" data-placement="bottom" title="Delete"></a>
+								<td class="vert-align text-center ">
+								<span class="">
+									<a href="<?PHP echo site_url();?>back_end/manufactur/view_edit/<?PHP echo $row->manufactur_id; ?>" " class="btn btn-info fa fa-pencil" onclick="if(confirm('Ubah data ini?')) return true; else return false;"  data-toggle="tooltip" data-placement="bottom" title="Edit"></a></div>
+									
+								<span class="">
+									<a href="<?php echo site_url();?>back_end/manufactur/delete/<?PHP echo $row->manufactur_id; ?>" class="btn btn-danger fa fa-trash" onclick="if(confirm('Apakah Anda yakin akan menghapus data?')) return true; else return false;"  data-toggle="tooltip" data-placement="bottom" title="Delete"></a></span>
 								</td>
 							</tr>
 							<?PHP }if(! $query->num_rows()) { ?>
