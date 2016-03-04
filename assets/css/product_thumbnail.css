@@ -4,13 +4,71 @@
     margin-left: -35px;
 }
 .gallery > li{
-    display: inline-flex;
+    display: inline-block;
 }
-
-.etalase{
-    border:1px solid #eeeeee;
-    margin:9px;
-    width:187px;
+@media screen and (max-width: 480px) {
+    .etalase_front{
+        border:1px solid #eeeeee;
+        width:100%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .etalase_in{
+        border:1px solid #eeeeee;
+        margin:5px;
+        width:360px;
+    }
+}
+@media screen and (max-width: 720px) and (min-width: 481px) {
+    .etalase_front{
+        border:1px solid #eeeeee;
+        width:50%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .etalase_in{
+        border:1px solid #eeeeee;
+        margin:5px;
+        width:260px;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 721px) {
+    .etalase_front{
+        border:1px solid #eeeeee;
+        width:33%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .etalase_in{
+        border:1px solid #eeeeee;
+        margin:5px;
+        width:230px;
+    }
+}
+@media screen and (max-width: 1280px) and (min-width: 1025px) {
+    .etalase_front{
+        border:1px solid #eeeeee;
+        width:25%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .etalase_in{
+        border:1px solid #eeeeee;
+        margin:5px;
+        width:187px;
+    }
+}
+@media screen and (min-width: 1281px) {
+    .etalase_front{
+        border:1px solid #eeeeee;
+        margin:17px;
+        width:187px;
+    }
+    .etalase_in{
+        border:1px solid #eeeeee;
+        margin:5px;
+        width:187px;
+    }
 }
 .etalase-img{
     height:150px;

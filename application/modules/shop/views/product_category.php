@@ -4,22 +4,14 @@
         <title>ELKASSHOP | shop</title>
         <link rel="stylesheet" type="text/css" href="<?php echo assets_url('css/product_thumbnail.css');?>"/>
     </head>
-    <body>
+    <body id="body">
         <div class="container">
-            <br/>
-            <ol class="breadcrumb pull-right">
+            <ol class="breadcrumb">
                 <li><a href="<?PHP echo site_url();?>"><i class="fa fa-home"></i> Beranda</a></li>
                 <li class="active">Cash Drawer</li>
             </ol>
             <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive center-block" src="<?php echo assets_url('images/banner_img/banner-twitter.png');?>" alt="banner#2">
-                </div>
-            </div>
-
-            <br/>
-            <div class="row">
-                <div class="col-lg-3 panel">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 panel">
                     <div class="panel-heading">
                         <div class="panel-title text-center"><h4>FILTER</h4></div>
                     </div>
@@ -30,70 +22,81 @@
                             <input type="text" name="max" class="form-control form-group" placeholder="Maks"/>
                             <br/>
                             <div class="form-group text-center">
-                                <a name="min" class="btn btn-danger">Bersihkan</a>
-                                <a name="max" class="btn btn-success">Telusuri</a>
+                                <button name="min" class="btn btn-danger" title="bersihkan" data-toggle="tooltip">
+                                    <span class="fa fa-trash-o"></span>
+                                </button>
+                                <button name="max" class="btn btn-success" title="telusuri" data-toggle="tooltip">
+                                    <span class="fa fa-filter"></span>
+                                </button>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="col-lg-9 panel" >
-                    <div class="navbar navbar-default navbar-form">
-                        <ul class="nav navbar-nav navbar-left">
-                            <li><a href="#" title="tampilan daftar"> <span class="fa fa-th-list text-primary"></span></a></li>
-                            <li><a href="#" title="tampilan kotak"> <span class="fa fa-th-large text-primary"></span></a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="navbar-form">Urut Berdasarkan &nbsp;
-                                <form method="post" class="form-group form-inline">
-                                    <span class="input-group">
-                                        <select class="form-control" style="width: 160px;height: 35px;">
-                                            <option>Standar</option>
-                                            <option>Terbaru</option>
-                                            <option>Terlama</option>
-                                            <option>Termurah</option>
-                                            <option>Termahal</option>
-                                            <option>A - Z</option>
-                                            <option>Z - A</option>
-                                        </select>
-                                    </span>
-                                </form>
-                            </li>
-                        </ul>
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 panel" >
+                    <div class="panel-heading" style="height: 60px;">
+                        <span class="pull-left">
+                            <button href="#" class="btn btn-primary" title="tampilan daftar" data-toggle="tooltip">
+                                <span class="fa fa-th-list"></span>
+                            </button>
+                            &nbsp;
+                            <button href="#" class="btn btn-primary"title="tampilan kotak" data-toggle="tooltip">
+                                <span class="fa fa-th-large"></span>
+                            </button>
+                        </span>
+                        <span class="pull-right">
+                            <form method="post" class="form-group form-inline">
+                                <span><span class="hidden-xs">Urut Berdasarkan &nbsp;</span>
+                                    <select class="form-control" style="width: 160px;height: 35px;">
+                                        <option>Standar</option>
+                                        <option>Terbaru</option>
+                                        <option>Terlama</option>
+                                        <option>Termurah</option>
+                                        <option>Termahal</option>
+                                        <option>A - Z</option>
+                                        <option>Z - A</option>
+                                    </select>
+                                </span>
+                            </form>
+                        </span>
                     </div>
-                    <div id="show"><div id="content">
-                        <ul class="gallery">
-                            <?php $offset = $this->uri->segment(3,0)+1;foreach($records as $row) {?>
-                                <li>
-                                    <div class="etalase">
-                                        <div class="etalase-img">
-                                            <img class="img-responsive" src="<?php echo assets_url('images/product_img/'.$row->image.'');?>" alt="cd"/>
-                                        </div>
-                                        <div class="etalase-content">
-                                            <?PHP echo $row->product_name;?><br/>
-                                            <?PHP echo $row->price;?><br/><br/>
-                                        </div>
-                                        <div class="etalase-foot">
-                                            <a href="<?php echo site_url('shop/shop_category_detail/category_detail/'.$row->product_id);?>" data-toggle="tooltip" data-placement="top" title="detail">
-                                                <div class="btn btn-primary"><span class="fa fa-eye" ></span></div>
-                                            </a>
-                                            <a type="button" onclick="add_cart(<?php echo $row->product_id?>)" title="add to cart" data-toggle="tooltip" data-placement="top">
-                                                <div class="btn btn-success"><span class="fa fa-cart-plus" ></span></div>
-                                            </a>
-                                            <a href="<?php echo site_url();?>" title="wish list" data-toggle="tooltip" data-placement="top">
-                                                <div class="btn btn-warning"><span class="fa fa-heart-o"></span></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                            <?php } $offset++;?>
-                        </ul>
-                        <div class="clearfix"></div>
+                    <div class="panel-body">
+                        <div id="show">
+                            <div id="content">
+                                <ul class="gallery">
+                                    <?php $offset = $this->uri->segment(3,0)+1;foreach($records as $row) {?>
+                                        <li>
+                                            <div class="etalase_in">
+                                                <div class="etalase-img">
+                                                    <img class="img-responsive" src="<?php echo assets_url('images/product_img/'.$row->image.'');?>" alt="cd"/>
+                                                </div>
+                                                <div class="etalase-content">
+                                                    <?PHP echo $row->product_name;?><br/>
+                                                    <?PHP echo $row->price;?><br/><br/>
+                                                </div>
+                                                <div class="etalase-foot">
+                                                    <a href="<?php echo site_url('shop/shop_category_detail/category_detail/'.$row->product_id);?>" data-toggle="tooltip" data-placement="top" title="detail">
+                                                        <div class="btn btn-primary"><span class="fa fa-eye" ></span></div>
+                                                    </a>
+                                                    <a type="button" onclick="add_cart(<?php echo $row->product_id?>)" title="add to cart" data-toggle="tooltip" data-placement="top">
+                                                        <div class="btn btn-success"><span class="fa fa-cart-plus" ></span></div>
+                                                    </a>
+                                                    <a href="<?php echo site_url();?>" title="wish list" data-toggle="tooltip" data-placement="top">
+                                                        <div class="btn btn-warning"><span class="fa fa-heart-o"></span></div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    <?php } $offset++;?>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
                         <div align="center"><?php echo $this->pagination->create_links();?></div>
-                    </div></div>
+                    </div>
                 </div>
             </div>
-
-            <br/><br/>
+            <br/>
             <div class="row">
                 <div class="col-lg-4">
                     <img class="img-responsive" src="<?php echo assets_url('images/banner_img/home2_banner.jpg');?>" alt="banner#2">
@@ -105,13 +108,10 @@
                     <img class="img-responsive" src="<?php echo assets_url('images/banner_img/home4_banner.jpg');?>" alt="banner#2">
                 </div>
             </div>
-
-            <br/>
             <div class="row" id="page">
                 <?php $this->load->view('manufacture');?>
             </div>
         </div>
-        <br/><br/>
     </body>
     <script type="text/javascript">
         $(function(){
@@ -133,12 +133,18 @@
         });
 
         function add_cart(id){
-            var id = id;
+            var target="<?php echo site_url('shop/shop_cart/add_cart')?>"+"/"+ id;
+            var xdata={ ID : id }
             $.ajax({
-                type:'POST',
-                data:{id : id},
-                url:'<?php echo site_url('shop/shop_cart/add_cart')?>'+'/'+ id,
-                success: function(){ alert('Keranjang berhasil di tambah'); }
+                type: "POST",
+                url: target,
+                data: xdata,
+                success:function(data){
+                    alert('Keranjang berhasil di tambah');
+                    $("#body").html(data);
+                }
+            }).done(function(e) {
+                $("#show")[0].reset();
             });
         }
     </script>

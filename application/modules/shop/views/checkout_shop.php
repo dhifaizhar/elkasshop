@@ -5,8 +5,7 @@
 </head>
 <body>
     <div class="container">
-        <br/>
-        <ol class="breadcrumb pull-right">
+        <ol class="breadcrumb">
             <li><a href="<?PHP echo site_url();?>"><i class="fa fa-home"></i> Beranda</a></li>
             <li>Checkout</li>
             <li class="active">Pengiriman</li>
@@ -143,7 +142,7 @@
             <div class="col-lg-5">
                 <div class="panel">
                     <div class="panel-heading">
-                        Detail Pesanan (<?php echo $jumlah->qty;?> Barang)
+                        Detail Pesanan (<?php echo $get->qty;?> Barang)
                     </div>
                     <div class="panel-body">
                         <table class="table table-bordered table-responsive no-border">
@@ -153,27 +152,19 @@
                                 <th>HARGA</th>
                             </tr>
                             <?PHP
-                            $i = 0;
-                            foreach($detail->result() as $row) {?>
+                            $total = 0;
+                            foreach($cart->result() as $row) {
+                                $discount = $row->discount;
+                                $subtotal = $row->price - ($discount/100*$row->price); ?>
                                 <tr>
                                     <td><?PHP echo $row->product_name;?></td>
-                                    <td width="110px" class="text-right"><?PHP echo $row->quantity;?></td>
-                                    <td><?PHP echo 'Rp &nbsp;'.$row->price;?></td>
+                                    <td class="text-center"><?PHP echo $row->quantity;?></td>
+                                    <td class="text-center"><?PHP echo 'Rp '.$subtotal;?></td>
                                 </tr>
-                            <?PHP } ?>
-                            <tr class="small text-info">
-                                <td class="text-center" colspan="2"> Diskon</td>
-                                <?php $query =  $jumlah;?>
-                                <td>Rp &nbsp;<?PHP echo $diskon;?></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Subtotal</td>
-                                <?php $query =  $jumlah;?>
-                                <td>Rp <?PHP echo $query->total;?></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2"> <b>Total</b><br><p class="small">(termasuk PPN)</p></td>
-                                <td style="font-size:larger;color: #256D9E;padding-top: 20px;"><b>Rp &nbsp;<?PHP echo $total;?></b></td>
+                            <?PHP $total = $total + $subtotal;} ?>
+                            <tr style="font-weight: bold;color: #256D9E;">
+                                <td colspan="2"> <b>Total Belanja</b><br><i class="small">(termasuk PPN)</i></td>
+                                <td class="text-center" colspan="2">Rp <?PHP echo $total;?></td>
                             </tr>
                         </table>
                     </div>

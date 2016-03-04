@@ -1,41 +1,31 @@
 <form id="cart_d">
-    <table class="table table-hover table-striped table-responsive">
-        <thead>
-        <tr>
-            <th>No</th>
-            <th>Produk</th>
-            <th class="text-center">Nama produk</th>
-            <th>Deskripsi</th>
-            <th>Jumlah</th>
-            <th>Harga</th>
-            <th>Aksi</th>
-        </tr>
-        </thead>
+    <table class="table table-responsive">
         <tbody>
         <?PHP
-        $i = 0;
-        foreach($cart->result() as $row) {?>
+        foreach($cart->result() as $row) {
+            $discount = $row->discount;
+            $total = $row->price - ($discount/100*$row->price);?>
             <tr>
-                <td width="10px" class="text-center"><?php $i++; echo $i;?></td>
-                <td width="100px"><img class="img-responsive center-block" src="<?php echo assets_url('images/product_img/'.$row->image);?>" alt="cd"/></td>
-                <td width="300px" class="text-center"><?PHP echo $row->product_name;?></td>
-                <td><?PHP echo $row->description;?></td>
-                <td width="20px"><?PHP echo 'x'.$row->quantity;?></td>
-                <td width="150px"><?PHP echo 'Rp '.$row->price;?></td>
-                <td width="20px" class="text-center">
-                    <a class="glyphicon glyphicon-remove-sign text-danger" onclick="hapus(<?php echo $row->cart_id?>)" title="hapus"></a>
+                <td width="125px" class="text-center">
+                    <img class="img-responsive center-block" src="<?php echo assets_url('images/product_img/'.$row->image);?>" alt="cd"/>
+                </td>
+                <td width="250px">
+                    <b><?PHP echo $row->product_name;?></b>
+                    <br/><?PHP echo 'Deskripsi Produk : '.$row->description;?>
+                    <br/><?PHP echo 'Kuantitas : '.$row->quantity;?>
+                </td>
+                <td width="200px">
+                    <br/><?PHP echo 'Harga  : Rp '.$row->price;?>
+                    <br/><?PHP echo 'Diskon : '.$discount.' %';?>
+                    <br/><p style="font-weight: bold;color: #256D9E;"><?PHP echo 'Total  : Rp '.$total;?></p>
+                </td>
+                <td width="10px" class="text-center">
+                    <span class="fa fa-remove text-primary" onclick="hapus(<?php echo $row->cart_id?>)" title="hapus item" data-toggle="tooltip"></span>
                 </td>
             </tr>
         <?PHP } if(! $cart->num_rows()) { ?>
-            <tr> <td colspan="7" align="center">Keranjang anda kosong</td> </tr>
+            <tr> <td colspan="4" align="center">Keranjang anda kosong</td> </tr>
         <?PHP } ?>
         </tbody>
-        <tfoot class="text-center">
-        <tr>
-            <td colspan="5"> Total Belanja</td>
-            <?php $query =  $this->cart_m->data_cart_count()->row();?>
-            <td colspan="2">Rp <?PHP echo $query->total;?></td>
-        </tr>
-        </tfoot>
     </table>
 </form>

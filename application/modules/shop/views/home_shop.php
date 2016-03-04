@@ -5,7 +5,7 @@
     </head>
     <body>
         <div class="container">
-            <div id="banner" class="carousel pull-right" data-ride="carousel" data-interval="5000" style="margin: 35px 0px 20px 15px;width:800px;height:314px;">
+            <div id="banner" class="carousel" data-ride="carousel" data-interval="5000" style="margin: 35px 0px 20px 15px;">
                 <ol class="carousel-indicators">
                     <li data-target="#banner" data-slide-to="0" class="active"></li>
                     <li data-target="#banner" data-slide-to="1"></li>
@@ -23,6 +23,9 @@
                     </div>
                 </div>
             </div>
+            <div class="clearfix"></div>
+
+            <div class="row"><?php $this->load->view('product_bestselling');?></div>
 
             <div class="row">
                 <div class="col-lg-4">
@@ -36,18 +39,12 @@
                 </div>
             </div>
 
-            <div class="row">
-                <?php $this->load->view('product_bestselling');?>
-            </div>
+            <div class="row"><?php $this->load->view('product_new');?></div>
 
             <div class="row">
                 <div class="col-lg-12">
                     <img class="img-responsive center-block" src="<?php echo assets_url('images/banner_img/banner-twitter.png');?>" alt="banner#2">
                 </div>
-            </div>
-
-            <div class="row">
-                <?php $this->load->view('product_new');?>
             </div>
 
             <div class="row">

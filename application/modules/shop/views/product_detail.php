@@ -6,14 +6,12 @@
     </head>
     <body>
         <div class="container">
-            <br/>
             <?php foreach($records as $row) {?>
-            <ol class="breadcrumb pull-right">
+            <ol class="breadcrumb">
                 <li><a href="<?PHP echo site_url();?>"><i class="fa fa-home"></i> Beranda</a></li>
                 <li><?php echo $row->category_name;?></li>
                 <li class="active"><?php echo $row->product_name;?></li>
             </ol>
-            <br/>
             <div class="panel" >
                 <div class="panel-heading">
                     <div class="panel-title"><h4>Detail Barang</h4></div>
